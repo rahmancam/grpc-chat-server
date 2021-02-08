@@ -15,8 +15,18 @@ go run main.go
 ```
 
 ## Echo Client
-- To run the server
+- Run multiple clients on different terminal and start chat
 ```sh
 cd client
-go run main.go
+go run main.go 127.0.0.1:8080 john 
+```
+
+```sh
+cd client
+go run main.go 127.0.0.1:8080 peter 
+```
+
+```sh
+cd client
+go run main.go 127.0.0.1:8080 abdul 
 ```

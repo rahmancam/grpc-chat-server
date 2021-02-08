@@ -59,7 +59,7 @@ func (c *Connection) start() {
 func (c *Connection) GetMessages(broadcast chan<- *chat.ChatMessage) error {
 	for {
 		msg, err := c.conn.Recv()
-		if err != io.EOF {
+		if err == io.EOF {
 			c.Close()
 			return nil
 		} else if err != nil {
